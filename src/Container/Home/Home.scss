@@ -1,0 +1,182 @@
+#home {
+  position: relative;
+background: rgb(17,24,37);
+  .app__wrapper {
+    padding: 0;
+  }
+}
+
+.app__header {
+  // flex:1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6rem 4rem 0;
+
+  @media screen and (min-width: 2000px) {
+    padding-top: 8rem;
+  }
+  @media screen and (max-width: 1024px) {
+    flex-direction: column-reverse;
+    padding: 3rem 1rem 0;
+  }
+}
+
+.app__header-info {
+  flex: 2;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 50%;
+  @media screen and (max-width: 2000px) {
+    width: 100%;
+    margin-right: 0rem;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0rem;
+  }
+}
+
+.app__header-badge {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  .typewriter {
+    font-size: 2rem;
+    color: rgb(204,214,246);
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin-top: 1rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+  }
+  .badge-cmp,
+  .tag-cmp {
+    padding: 1rem 1rem 0 1rem;
+    border: 1px solid red;
+    border: var(--white-color);
+    height: fit-content;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    // box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    div {
+      p {
+        font-size: 1.7rem;
+        color: rgb(204,214,246);
+        font-family: 'Roboto Mono', monospace;
+      }
+      h1 {
+        color: rgb(204,214,246);
+        font-family: 'Roboto Mono', monospace;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      margin: auto;
+      padding: 1rem auto;
+    }
+  }
+  .badge-cmp {
+    text-align: left;
+  }
+  .tag-cmp {
+    flex-direction: column;
+    margin-top: 3rem;
+
+    p,
+    h2 {
+      width: 100%;
+      text-transform: capitalize;
+      text-align: left;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .span {
+    font-size: 2.5rem;
+    padding-bottom: 12px;
+    @media screen and (min-width: 2000px) {
+      font-size: 5rem;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.animate {
+  overflow: hidden;
+  border-radius: 42% 56% 72% 28% /42% 42% 56% 48%;
+  border-radius: 50%;
+  animation: motion 3.75s linear infinite;
+}
+
+.app__header2-img {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  margin-left: 3rem;
+
+  img {
+    width: 100%;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: contain;
+    z-index: 1;
+    overflow: hidden;
+    border:2px solid rgb(204,214,246);
+    border-radius: 82% 65% 82% 88% /28% 92% 75% 88%;
+    border-radius: 50%;
+    animation: motion 5s linear infinite;
+    animation-delay: 1s;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 60%;
+    margin: 5rem auto 0 auto;
+  }
+}
+
+@keyframes motion {
+  0% {
+    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+} 
+
+50% {
+    border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+}
+
+100% {
+  border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+} 
+}
